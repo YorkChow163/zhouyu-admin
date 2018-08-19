@@ -45,17 +45,23 @@
             username: 'zhouyu',
             password: '123456'
         },
+        // beforeCreate: function () {
+        //     if (self != top) {
+        //         top.location.href = self.location.href;
+        //     }
+        // },
         methods: {
             login: function () {
                 var param = {};
                 param.username = vm.username;
                 param.password = vm.password;
                 var paramstr = JSON.stringify(param);
-                console.log("hahahhaha:" + paramstr)
                 this.$http.post(url, paramstr)
                     .then(function (res) {
-                        var string = JSON.stringify(res.data);
-                        console.log("成功啦:"+string)
+                        if(res.data.code==0){
+                            console.log("成功啦,code:"+res.data.code)
+                            parent.location.href = 'index.html';
+                        }
                     }).catch(function (eror) {
                     console.log("失败啦:")
                 });
