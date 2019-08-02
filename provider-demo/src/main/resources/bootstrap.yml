@@ -1,0 +1,14 @@
+dubbo:
+  registry:
+    address: spring-cloud://localhost #dubbo的注册中心直接使用SpringCloud配置文件的注册中心
+spring:
+  application:
+    name: provider-demo #服务名
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心
+      discovery:
+        server-addr: 127.0.0.1:8848 #注册中心
