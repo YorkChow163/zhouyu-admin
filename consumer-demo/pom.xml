@@ -5,20 +5,28 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <artifactId>consumer-demo</artifactId>
   <dependencies>
-    <!--使用nacos作为配置中心-->
     <dependency>
-      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-      <groupId>org.springframework.cloud</groupId>
-    </dependency>
-    <!--使用nacos作为注册和发现中心-->
-    <dependency>
-      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-      <groupId>org.springframework.cloud</groupId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
-      <artifactId>provider-api</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <artifactId>dubbo-api</artifactId>
       <groupId>com.zhouyu</groupId>
       <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- Dubbo Spring Cloud Starter -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-dubbo</artifactId>
+    </dependency>
+    <!-- Spring Cloud Nacos Service Discovery -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
   </dependencies>
 
